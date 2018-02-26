@@ -7,15 +7,25 @@ html {
 }
 
 body {
-    align-items: center;
     background: radial-gradient(#add8e6 40%, #6fb0c5 99%);
     color: whitesmoke;
-    display: flex;
     font-family: sans-serif;
-    height: 100%;
-    justify-content: center;
     margin: 0;
+    position: relative;
     text-align: center;
+}
+
+.content-section {
+    padding: 45px 0;
+}
+
+.content-section--large {
+    padding: 120px 0;
+}
+
+#controls {
+    background-color: lightgray;
+    height: 500px;
 }
 
 header {
@@ -25,16 +35,19 @@ header {
     padding-bottom: 45px;
 }
 
-
 .level {
     height: 450px;
     width: 450px;
 }
 
-.cta-section {
-    font-size: 28px;
+footer {
+    background-color: #FA5C5C;
+    bottom: 0;
+    font-size: 20px;
     font-weight: bold;
-    padding-top: 45px;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
 }
 
 #game-link {
@@ -46,11 +59,11 @@ header {
     text-decoration: none;
 }
 
-#game-link:visited {
+#game-link:link, #game-link:visited {
     color: whitesmoke;
 }
 
 #game-link:hover {
-    color: #FA5C5C;
-    border-color: #FA5C5C;
+    border-color: lightgray;
+    color: lightgray;
 }
