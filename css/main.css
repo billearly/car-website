@@ -41,6 +41,7 @@ header {
 }
 
 footer {
+    backface-visibility: hidden;
     background-color: #FA5C5C;
     bottom: 0;
     font-size: 20px;
@@ -51,6 +52,7 @@ footer {
 }
 
 #game-link {
+    background-color: whitesmoke;
     border: 3px solid whitesmoke;
     border-radius: 5px;
     display: inline-block;
@@ -60,10 +62,5 @@ footer {
 }
 
 #game-link:link, #game-link:visited {
-    color: whitesmoke;
-}
-
-#game-link:hover {
-    border-color: lightgray;
-    color: lightgray;
+    color: #FA5C5C;
 }
