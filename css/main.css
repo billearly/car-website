@@ -9,7 +9,7 @@ html {
 body {
     background: radial-gradient(#add8e6 40%, #6fb0c5 99%);
     color: whitesmoke;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     position: relative;
     text-align: center;
@@ -23,8 +23,18 @@ body {
     padding: 120px 0;
 }
 
+.fas {
+    font-size: 45px;
+    display: block;
+}
+
+#intro .fas {
+    padding-top: 50px;
+}
+
 #controls {
-    background-color: lightgray;
+    background-color: #fbfbfb;
+    color: darkgray;
     height: 500px;
 }
 
@@ -35,7 +45,7 @@ header {
     padding-bottom: 45px;
 }
 
-.level {
+.level-screenshot {
     height: 450px;
     width: 450px;
 }
@@ -63,4 +73,11 @@ footer {
 
 #game-link:link, #game-link:visited {
     color: #FA5C5C;
+}
+
+@media screen and (max-width: 520px) {
+    .level-screenshot {
+        height: 250px;
+        width: 250px;
+    }
 }
