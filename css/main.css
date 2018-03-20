@@ -7,7 +7,6 @@ html {
 }
 
 body {
-    background: radial-gradient(#add8e6 40%, #6fb0c5 99%);
     color: whitesmoke;
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -21,6 +20,24 @@ body {
 
 .content-section--large {
     padding: 120px 0;
+}
+
+.intro:not(:last-child) {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+#intro--beach {
+    background: radial-gradient(#add8e6 40%, #6fb0c5 99%);
+}
+
+#intro--field {
+    background: radial-gradient(#ade6d1 40%, #6fc5b5 99%);
+}
+
+#intro--snow {
+    background: radial-gradient(white 40%, black 99%);
 }
 
 .fas {
