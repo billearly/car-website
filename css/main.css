@@ -22,22 +22,32 @@ body {
     padding: 120px 0;
 }
 
+.intro {
+    opacity: 1;
+    -webkit-transition: opacity 1.5s;
+    transition: opacity 1.5s;
+}
+
 .intro:not(:last-child) {
     position: absolute;
     left: 0;
     right: 0;
 }
 
-#intro--beach {
+#intro__beach {
     background: radial-gradient(#add8e6 40%, #6fb0c5 99%);
 }
 
-#intro--field {
+#intro__field {
     background: radial-gradient(#ade6d1 40%, #6fc5b5 99%);
 }
 
-#intro--snow {
+#intro__snow {
     background: radial-gradient(white 40%, black 99%);
+}
+
+.intro--hidden {
+    opacity: 0;
 }
 
 .fas {
