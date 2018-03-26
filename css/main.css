@@ -8,7 +8,7 @@ html {
 
 body {
     color: whitesmoke;
-    font-family: 'Roboto', sans-serif;
+    font-family: sans-serif;
     margin: 0;
     position: relative;
     text-align: center;
@@ -43,7 +43,7 @@ body {
 }
 
 #intro__snow {
-    background: radial-gradient(white 40%, black 99%);
+    background: radial-gradient(#9cf1ff 40%, #70a9e4 99%);
 }
 
 .intro--hidden {
@@ -55,7 +55,7 @@ body {
     display: block;
 }
 
-#intro .fas {
+.intro > .fas {
     padding-top: 50px;
 }
 
