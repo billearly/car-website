@@ -1,0 +1,28 @@
+{
+  "name": "car-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/wdio",
+    "start": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/billearly/car-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/billearly/car-website/issues"
+  },
+  "homepage": "https://github.com/billearly/car-website#readme",
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "wdio-dot-reporter": "0.0.9",
+    "wdio-mocha-framework": "^0.5.13",
+    "wdio-selenium-standalone-service": "0.0.10",
+    "wdio-visual-regression-service": "^0.8.0",
+    "webdriverio": "^4.12.0"
+  }
+}
