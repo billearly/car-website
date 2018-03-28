@@ -1,6 +1,5 @@
 var gulp = require('gulp');
 var rev = require('gulp-rev');
-//var fingerprint = require('gulp-fingerprint');
 var revReplace = require('gulp-rev-replace');
 var del = require('del');
 
@@ -31,7 +30,5 @@ gulp.task('rev-replace', function () {
         .pipe(revReplace({ manifest: manifest }))
         .pipe(gulp.dest('dist'));
 });
-
-//gulp.task('default', ['delete', 'copy', 'fingerprint']);
 
 gulp.task('default', gulp.series('delete', 'copy', 'rev', 'rev-replace'));
