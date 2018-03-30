@@ -1,6 +1,7 @@
 class WebPage {
 
-    get itchioLink() { return $('footer #game-link'); }
+    get stickyCta()     { return $('.sticky-cta'); }
+    get itchioLink()    { return $('.sticky-cta #game-link'); }
 
 	open(path) {
 		browser.url('/');
@@ -8,6 +9,10 @@ class WebPage {
     
     clickItchioLink() {
         this.itchioLink.click();
+    }
+
+    isStickyCtaVisible() {
+        return this.stickyCta.isVisibleWithinViewport();
     }
 }
 

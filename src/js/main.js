@@ -1,3 +1,4 @@
+// --- Intro Image Fading ---
 var delay = 5000;
 
 var beachSection = document.getElementById('intro__beach');
@@ -30,3 +31,14 @@ function updateSectionIndex() {
         sectionIndex = 0;
     }
 }
+
+// --- Sticky CTA ---
+var stickyCta = document.getElementById('sticky-cta');
+
+window.addEventListener('scroll', function () {
+    if (window.pageYOffset > 100) {
+        stickyCta.classList.add('sticky-cta--enabled');
+    } else {
+        stickyCta.classList.remove('sticky-cta--enabled');
+    }
+});
