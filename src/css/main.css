@@ -112,13 +112,13 @@ header {
 }
 
 .level-screenshot {
-    height: 450px;
+    height: auto;
     width: 450px;
 }
 
 @media screen and (max-width: 520px) {
     .level-screenshot {
-        height: 250px;
+        height: auto;
         width: 250px;
     }
 }
