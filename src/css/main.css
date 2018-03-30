@@ -2,10 +2,6 @@
     box-sizing: border-box;
 }
 
-html {
-    height: 100%;
-}
-
 body {
     color: whitesmoke;
     font-family: sans-serif;
@@ -15,20 +11,18 @@ body {
 }
 
 .sticky-cta {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1;
-
-    transform: translateY(-100%);
-    -webkit-transition: transform 0.5s;
-    transition: transform 0.5s;
-
     background-color: #FA5C5C;
     font-size: 20px;
     font-weight: bold;
+    left: 0;
     padding: 10px 0;
+    position: fixed;
+    top: 0;
+    transform: translateY(-100%);
+    -webkit-transition: transform 0.5s;
+    transition: transform 0.5s;
+    width: 100%;
+    z-index: 1;
 }
 
 .sticky-cta--enabled {
@@ -58,9 +52,17 @@ body {
 }
 
 .intro {
+    height: 100vh;
     opacity: 1;
     -webkit-transition: opacity 1.5s;
     transition: opacity 1.5s;
+
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .intro:not(:last-child) {
@@ -91,7 +93,9 @@ body {
 }
 
 .intro > .fas {
-    padding-top: 50px;
+    cursor: pointer;
+    margin-top: 50px;
+    padding: 10px;
 }
 
 #controls {

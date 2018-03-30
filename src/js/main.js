@@ -36,9 +36,24 @@ function updateSectionIndex() {
 var stickyCta = document.getElementById('sticky-cta');
 
 window.addEventListener('scroll', function () {
-    if (window.pageYOffset > 100) {
+    if (window.pageYOffset >= 200) {
         stickyCta.classList.add('sticky-cta--enabled');
     } else {
         stickyCta.classList.remove('sticky-cta--enabled');
     }
 });
+
+// --- Scroll Icon ---
+var scrollIcons = document.getElementsByClassName('scroll-icon');
+
+for (var i = 0; i < scrollIcons.length; i++) {
+    scrollIcons[i].addEventListener('click', function() {
+        if (window.pageYOffset < 150) {
+            window.scrollBy({
+                top: 150,
+                left: 0,
+                behavior: 'smooth'
+            });
+        }
+    });
+}
