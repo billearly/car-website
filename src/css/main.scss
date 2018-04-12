@@ -1,16 +1,23 @@
+$width-small: 520px;
+$color-itchio: #FA5C5C;
+$color-white: #ffffff;
+$color-white-off: #f5f5f5;
+$color-grey: #fbfbfb;
+$color-grey-dark: #a9a9a9;
+
 *, *:before, *:after {
     box-sizing: border-box;
 }
 
 body {
-    color: whitesmoke;
+    color: $color-white-off;
     font-family: sans-serif;
     margin: 0;
     position: relative;
     text-align: center;
 
     .sticky-cta {
-        background-color: #FA5C5C;
+        background-color: $color-itchio;
         font-size: 20px;
         font-weight: bold;
         left: 0;
@@ -28,8 +35,8 @@ body {
         }
 
         #game-link {
-            background-color: whitesmoke;
-            border: 3px solid whitesmoke;
+            background-color: $color-white-off;
+            border: 3px solid $color-white-off;
             border-radius: 5px;
             display: inline-block;
             margin: 10px;
@@ -38,7 +45,7 @@ body {
 
             &:link,
             &:visited {
-                color: #FA5C5C;
+                color: $color-itchio;
             }
         }
     }
@@ -80,10 +87,14 @@ body {
             opacity: 0;
         }
 
-        > .fas {
+        .scroll-icon {
             cursor: pointer;
             margin-top: 50px;
             padding: 10px;
+
+            @media screen and (max-width: $width-small) {
+                margin-top: 10px;
+            }
         }
 
         &#intro__beach {
@@ -102,20 +113,23 @@ body {
             font-size: 62px;
             font-style: italic;
             font-weight: bold;
+
+            @media screen and (max-width: $width-small) {
+                font-size: 48px;
+            }
+        }
+
+        .sub-header {
+            @media screen and (max-width: $width-small) {
+                font-size: 14px;
+            }
         }
 
         .divider {
             min-width: 100px;
-            border-bottom: 1px solid white;
+            border-bottom: 1px solid $color-white;
             margin-top: 15px;
             margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 20px;
-            border-top: 1px solid white;
-            padding-top: 25px;
-            min-width: 220px;
         }
 
         .level-screenshot {
@@ -123,15 +137,16 @@ body {
             width: 450px;
             padding-top: 45px;
 
-            @media screen and (max-width: 520px) {
+            @media screen and (max-width: $width-small) {
+                padding-top: 15px;
                 width: 250px;        
             }
         }
     }
 
     #controls {
-        background-color: #fbfbfb;
-        color: darkgray;
+        background-color: $color-grey;
+        color: $color-grey-dark;
         height: 500px;
     }
 }
