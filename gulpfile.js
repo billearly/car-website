@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var rev = require('gulp-rev');
 var revReplace = require('gulp-rev-replace');
 var clean = require('gulp-clean');
+var sass = require('gulp-sass');
 
 gulp.task('clean', function () {
     return gulp.src(['./build/**/*', './dist/**/*'])
@@ -13,11 +14,32 @@ gulp.task('copy', function () {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('rev', function () {
-    return gulp.src(['src/css/*.css', 'src/js/*.js'], { base: 'src' })
+gulp.task('js', function () {
+    return gulp.src(['src/js/*.js'], { base: 'src' })
         .pipe(rev())
         .pipe(gulp.dest('dist'))
-        .pipe(rev.manifest())
+        .pipe(rev.manifest(
+            'build/rev-manifest.json',
+            {
+                base: 'build',
+                merge: true
+            }
+        ))
+        .pipe(gulp.dest('./build'));
+});
+
+gulp.task('sass', function () {
+    return gulp.src(['src/css/*.scss'], { base: 'src' })
+        .pipe(sass())
+        .pipe(rev())
+        .pipe(gulp.dest('dist'))
+        .pipe(rev.manifest(
+            'build/rev-manifest.json',
+            {
+                base: 'build',
+                merge: true
+            }
+        ))
         .pipe(gulp.dest('./build'));
 });
 
@@ -33,5 +55,5 @@ gulp.task('watch', function () {
     gulp.watch('./src/**/*', gulp.series('build'));
 });
 
-gulp.task('build', gulp.series('clean', 'copy', 'rev', 'rev-replace'));
+gulp.task('build', gulp.series('clean', 'copy', 'js', 'sass', 'rev-replace'));
 gulp.task('default', gulp.series('build'));
