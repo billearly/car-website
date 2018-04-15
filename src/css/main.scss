@@ -56,9 +56,16 @@ body {
         &--large {
             padding: 120px 0;    
         }
+
+        header {
+            font-size: 62px;
+            font-style: italic;
+            font-weight: bold;
+        }
     }
 
-    .fas {
+    .fas,
+    .far {
         font-size: 45px;
         display: block;
     }
@@ -91,10 +98,6 @@ body {
             cursor: pointer;
             margin-top: 50px;
             padding: 10px;
-
-            @media screen and (max-width: $width-small) {
-                margin-top: 10px;
-            }
         }
 
         &#intro__beach {
@@ -109,22 +112,6 @@ body {
             background: radial-gradient(#9cf1ff 40%, #70a9e4 99%);
         }
 
-        header {
-            font-size: 62px;
-            font-style: italic;
-            font-weight: bold;
-
-            @media screen and (max-width: $width-small) {
-                font-size: 48px;
-            }
-        }
-
-        .sub-header {
-            @media screen and (max-width: $width-small) {
-                font-size: 14px;
-            }
-        }
-
         .divider {
             min-width: 100px;
             border-bottom: 1px solid $color-white;
@@ -136,17 +123,71 @@ body {
             height: auto;
             width: 450px;
             padding-top: 45px;
-
-            @media screen and (max-width: $width-small) {
-                padding-top: 15px;
-                width: 250px;        
-            }
         }
     }
 
-    #controls {
+    #basics {
         background-color: $color-grey;
         color: $color-grey-dark;
-        height: 500px;
+    }
+
+    .icon-list {
+        display: flex;
+        padding: 50px 25px 0;
+        justify-content: center;
+
+        .icon-list-item {
+            padding: 0 10px;
+            width: 200px;
+
+            .item-icon {
+                padding-bottom: 20px;
+            }
+
+            .item-description {
+                line-height: 1.4;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $width-small) {
+    body {
+        .content-section {
+            header {
+                font-size: 48px;
+            }
+        }
+
+        .intro {
+            .sub-header {
+                font-size: 14px;
+            }
+
+            .level-screenshot {
+                padding-top: 15px;
+                width: 250px;
+            }
+
+            .scroll-icon {
+                margin-top: 10px;
+            }
+        }
+
+        .icon-list {
+            flex-direction: column;
+            align-items: center;
+            padding-top: 0;
+
+            .icon-list-item {
+                padding: 50px;
+                border-bottom: 1px solid $color-grey-dark;
+                width: auto;
+
+                &:last-child {
+                    border: none;
+                }
+            }
+        }
     }
 }
